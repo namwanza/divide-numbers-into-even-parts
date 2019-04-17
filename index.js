@@ -16,8 +16,8 @@ var splitInteger = function(num, parts) {
     // Am using a do-while loop here to text the condition and end the list if 'total' has reached 10
   
     do {
-      i -= min; // Let's subtract 'min' from 'n'
-      arr.push(i > min ? min : j - total); // push 'min' or reainder
+      i -= min; // Let's subtract 'min' from 'i'
+      arr.push(i > min ? min : j - total); // push 'min' or remainder
       total += arr[arr.length - 1]; // Let's keep track of total
     } while (i > min); 
   
@@ -25,7 +25,8 @@ var splitInteger = function(num, parts) {
     return arr;
   }
   
-  // oh wawoo... let's call our function to take on num = 10, parts = 0
-  var result = splitInteger(10, 5)
-  // Let's try to log some result into the console
+  // oh wawoo... let's call our function to take on num = 10, parts = 5
+  var result = splitInteger(10, 5);
+  var result = splitInteger(20, 6);
+  // Try to log some result into the console
   console.log(result);
